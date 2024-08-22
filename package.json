@@ -1,8 +1,9 @@
 {
   "name": "coe-comp-lib",
-  "private": true,
+  "private": false,
   "version": "0.0.1",
   "type": "module",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -30,5 +31,10 @@
     "storybook": "^8.2.9",
     "typescript": "^5.5.3",
     "vite": "^5.4.1"
-  }
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "main": "lib/coe-comp-lib.umd.js",
+  "module": "lib/coe-comp-lib.es.js"
 }
