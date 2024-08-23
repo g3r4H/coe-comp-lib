@@ -1,17 +1,21 @@
 import install from '@twind/with-web-components';
 import {LitElement, html} from 'lit';
-import {customElement, state} from 'lit/decorators.js';
+import {customElement, property} from 'lit/decorators.js';
 import config from '../../twind.config';
+
+export interface ISidemenu {
+  items: string[];
+}
 
 /**
  * An COE sidemenu component
  */
 @customElement('coe-sidemenu')
 @install(config)
-export class Sidemenu extends LitElement {
+export class Sidemenu extends LitElement implements ISidemenu {
   // API
-  @state()
-  items: string[] = ['Item 1', 'Item 2', 'Item 3'];
+  @property()
+  items: string[] = [];
 
   override render() {
     console.log(this.items);
