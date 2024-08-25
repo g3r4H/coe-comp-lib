@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.7.0",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@storybook/addon-essentials": "^8.2.9",
     "@storybook/addon-links": "^8.2.9",
     "@storybook/blocks": "^8.2.9",
@@ -36,5 +37,6 @@
     "lib/**/*"
   ],
   "main": "lib/coe-comp-lib.umd.js",
-  "module": "lib/coe-comp-lib.es.js"
+  "module": "lib/coe-comp-lib.es.js",
+  "types": "lib/index.d.ts"
 }

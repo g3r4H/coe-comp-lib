@@ -1,7 +1,7 @@
 import install from '@twind/with-web-components';
 import {LitElement, html} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
-import config from '../../twind.config';
+import config from '../twind.config';
 
 export interface ISidemenu {
   items: string[];

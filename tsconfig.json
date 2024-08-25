@@ -10,8 +10,6 @@
       "DOM.Iterable"
     ],
     "skipLibCheck": true,
-    "outDir": "lib",
-    "declaration": true,
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,

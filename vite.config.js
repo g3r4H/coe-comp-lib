@@ -1,4 +1,5 @@
 // vite.config.js
+import typescript from '@rollup/plugin-typescript';
 import {resolve} from 'path';
 import {defineConfig} from 'vite';
 
@@ -21,9 +22,21 @@ export default defineConfig({
         // for externalized deps
         globals: {
           lit: 'Lit',
+          'lit/directives/style-map.js': 'styleMap',
+          'lit/decorators.js': 'decorators',
         },
       },
+      plugins: [
+        typescript({
+          tsconfig: './tsconfig.json',
+          declaration: true,
+          declarationMap: true,
+          declarationDir: resolve(__dirname, 'lib'),
+          rootDir: resolve(__dirname, 'src'),
+        }),
+      ],
     },
     outDir: resolve(__dirname, 'lib'),
+    emptyOutDir: true,
   },
 });
