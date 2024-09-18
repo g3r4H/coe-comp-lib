@@ -1,7 +1,7 @@
 {
   "name": "coe-comp-lib",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.1.0",
   "type": "module",
   "license": "MIT",
   "scripts": {
@@ -20,16 +20,17 @@
     "lit": "^3.2.0"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "^1.7.0",
+    "@chromatic-com/storybook": "^2.0.2",
     "@rollup/plugin-typescript": "^11.1.6",
-    "@storybook/addon-essentials": "^8.2.9",
-    "@storybook/addon-links": "^8.2.9",
-    "@storybook/blocks": "^8.2.9",
-    "@storybook/test": "^8.2.9",
-    "@storybook/web-components": "^8.2.9",
-    "@storybook/web-components-vite": "^8.2.9",
+    "@storybook/addon-essentials": "^8.3.1",
+    "@storybook/addon-links": "^8.3.1",
+    "@storybook/blocks": "^8.3.1",
+    "@storybook/test": "^8.3.1",
+    "@storybook/web-components": "^8.3.1",
+    "@storybook/web-components-vite": "^8.3.1",
     "chromatic": "^11.7.1",
-    "storybook": "^8.2.9",
+    "storybook": "^8.3.1",
+    "tailwindcss": "^3.4.10",
     "typescript": "^5.5.3",
     "vite": "^5.4.1"
   },

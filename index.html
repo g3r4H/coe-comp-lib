@@ -2,44 +2,62 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/vite.svg" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0" />
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + Lit + TS</title>
-    <link
-      rel="stylesheet"
-      href="./src/index.css" />
-    <script
-      type="module"
-      src="/src/my-element.ts"></script>
-    <script
-      type="module"
-      src="/src/stories/Sidemenu.ts"></script>
-    <script
-      type="module"
-      src="/src/stories/Card.ts"></script>
+    <link rel="stylesheet" href="./src/index.css" />
+    <script type="module" src="/src/my-element.ts"></script>
+    <script type="module" src="/src/stories/Sidemenu.ts"></script>
+    <script type="module" src="/src/components/card/card.ts"></script>
+    <script type="module" src="/src/components/button/button.ts"></script>
+    <script type="module" src="/src/components/input/input.ts"></script>
+    <script type="module" src="/src/components/nav-menu/nav-menu.ts"></script>
   </head>
   <body>
-    <coe-sidemenu></coe-sidemenu>
-    <coe-card
-      name="Notify me"
-      counter="5"></coe-card>
-    <my-element>
+    <div style="display:flex; flex-direction: column; gap:10px; padding:10px; border: 1px solid green; width: 100%;">
+      <div style="display:flex; gap:10px; padding:10px; border: 1px solid purple;">
+        <coe-button type="primary">A Primary</coe-button>
+        <coe-button type="secondary">A Secondary</coe-button>
+        <coe-button type="disabled">A Disabled</coe-button>
+      </div>
+        
+      <div style="display:flex; gap:10px; padding:10px; border: 1px solid purple;">
+        <coe-card title="Identified Scenarios" counter="10" type="accent"></coe-card>
+        <coe-card title="Generated Test Cases" counter="20" type="accent"></coe-card>
+        <coe-card title="Microbots" counter="30" type="accent"></coe-card>
+        <coe-card title="Passed" counter="30" type="success"></coe-card>
+        <coe-card title="Failed" counter="30" type="danger"></coe-card>
+      </div>
+        
+      <div style="display:flex; flex-direction: column; gap:10px; padding:10px; border: 1px solid purple;">
+        <coe-input label="Email" type="email"></coe-input>
+        <coe-input label="Text" type="text"></coe-input>
+        <coe-input label="Password" type="password"></coe-input>
+      </div>
+
+      <div style="display:flex; gap:10px; padding:10px; border: 1px solid purple;">
+        <coe-nav-menu></coe-nav-menu>
+      </div>
+    </div>
+    
+    <!-- <my-element>
       <h1>Vite + Lit + Tailwind</h1>
-    </my-element>
+    </my-element> -->
 
     <script>
-      document.querySelector('coe-sidemenu').items = [
-        'Item 1',
-        'Item 2',
-        'Item 3',
-        'Item 4',
-        'Item 5',
+      const items = [
+        {text: 'Item 1'},
+        {text: 'Item 2'},
+        {text: 'Item 3'},
+        {text: 'Item 4'},
+        {text: 'Item 5'},
       ];
+      document.querySelector('coe-nav-menu').items = items;
     </script>
   </body>
 </html>

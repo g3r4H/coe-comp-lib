@@ -1,0 +1,98 @@
+import { Meta, Typeset } from '@storybook/blocks';
+
+<Meta title="Essentials/Typpography" />
+
+export const weight = {
+  thin: '100',
+  extralight: '200',
+  light: '300',
+  regular: '400',
+  medium: '500',
+  semibold: '600',
+  bold: '700',
+  extrabold: '800',
+  black: '900',
+};
+
+export const headers = {
+  lineheight: 1.2,
+  weight: weight.regular,
+  h1: { px: '32.44px', rem: '2.027rem' },
+  h2: { px: '28.83px', rem: '1.802rem' },
+  h3: { px: '25.63px', rem: '1.602rem' },
+  h4: { px: '22.78px', rem: '1.424rem' },
+  h5: { px: '20.25px', rem: '1.266rem' },
+  h6: { px: '18px', rem: '1.125rem' },
+};
+
+export const body = {
+  lineheight: 1.5,
+  weight: weight.regular,
+  size: { px: '16px', rem: '1rem' },
+};
+
+export const small = {
+  lineheight: 1.5,
+  weight: weight.regular,
+  s1: { px: '14.22px', rem: '0.889rem' },
+  s2: { px: '12.64px', rem: '0.79rem' },
+};
+
+export const typography = {
+  type: {
+    primary:
+      'Inter, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+  },
+  size: {
+    xs: { px: '12px', rem: '0.75rem' },
+    sm: { px: '14px', rem: '0.875rem' },
+    base: { px: '16px', rem: '1rem' },
+    lg: { px: '18px', rem: '1.125rem' },
+    xl: { px: '20px', rem: '1.25rem' },
+    xl2: { px: '24px', rem: '1.5rem' },
+    xl3: { px: '30px', rem: '1.875rem' },
+    xl4: { px: '36px', rem: '2.25rem' },
+    xl5: { px: '48px', rem: '3rem' },
+  },
+};
+
+export const SampleText =
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+
+## Typography
+
+### Font: [Inter](https://fonts.google.com/specimen/Inter)
+
+#### Headers
+
+<Typeset
+  fontSizes={[
+    headers.h1.px,
+    headers.h2.px,
+    headers.h3.px,
+    headers.h4.px,
+    headers.h5.px,
+    headers.h6.px,
+  ]}
+  fontWeight={headers.weight}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>
+
+#### Body
+
+<Typeset
+  fontSizes={[body.size.px]}
+  fontWeight={body.weight}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>
+
+#### Small
+
+<Typeset
+  fontSizes={[small.s1.px, small.s2.px]}
+  fontWeight={small.weight}
+  sampleText={SampleText}
+  fontFamily={typography.type.primary}
+/>

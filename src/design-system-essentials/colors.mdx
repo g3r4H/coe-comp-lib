@@ -1,0 +1,51 @@
+import { ColorItem, ColorPalette, Meta } from '@storybook/blocks';
+import colors from '../tokens/colors.json';
+import imageSrc from './603010.png';
+
+<Meta title="Essentials/Colors" />
+
+## Colors
+
+### Brand
+
+<ColorPalette>
+  <ColorItem title="Primary - Blue" colors={colors.blue}></ColorItem>
+</ColorPalette>
+
+<ColorPalette>
+  <ColorItem title="Secondary - Lime" colors={colors.lime}></ColorItem>
+</ColorPalette>
+
+### Statuses
+
+<ColorPalette>
+  <ColorItem title="Success - Green" colors={colors.green}></ColorItem>
+</ColorPalette>
+
+<ColorPalette>
+  <ColorItem title="Danger - Red" colors={colors.red}></ColorItem>
+</ColorPalette>
+
+<ColorPalette>
+  <ColorItem title="Warning - Yellow" colors={colors.yellow}></ColorItem>
+</ColorPalette>
+
+### Neutrals
+
+<ColorPalette>
+  <ColorItem title="White" colors={{ white: colors.white }}></ColorItem>
+</ColorPalette>
+
+<ColorPalette>
+  <ColorItem title="Black" colors={{ black: colors.black }}></ColorItem>
+</ColorPalette>
+
+<ColorPalette>
+  <ColorItem title="Gray" colors={colors.gray}></ColorItem>
+</ColorPalette>
+
+## 60/30/10 Rule
+
+When choosing a color palette, 60% of the palette is dedicated to the dominant color — usually, we call it neutral. Secondary color, or complementary, makes up 30% of the palette, and a third color, accent one, is used for the remaining 10% of the design.
+
+<img src={imageSrc} alt="My local image" />
